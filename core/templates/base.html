@@ -1,0 +1,342 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="az">
+  <!-- Mirrored from billboard.az/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Dec 2021 06:21:02 GMT -->
+  <!-- Added by HTTrack --><meta
+    http-equiv="content-type"
+    content="text/html;charset=UTF-8"
+  /><!-- /Added by HTTrack -->
+  <head>
+    <meta charset="utf-8" />
+    <title>Billboard sifarişi</title>
+    <meta
+      name="keywords"
+      content="billboard,lightbox,наружная реклама,билборд,billboard reklam,col reklamlari,лайтбокс,reklam billboard,billboard reklam qiymeti,брандмауэр,билборд,outdoor reklam,lightbox reklam,banner reklam,led reklam,led ekran reklam,led reklam,led ekran reklam,reklam led,reklam panosu,вывеска,led monitor,led qiymeti,led monitor reklam,led ekran,isiqli reklam,reklam lovheleri,reklam panosu,led reklam panosu,lightbox reklama,реклама наружная,reklam led monitor bakı,let pano,led reklam,led ekran monitor qiymetleri,lightbox reklamları,scroller reklama,scroller reklam,led ekran,led pano,reklam led ekran,işıqlı pano,prizma reklam,işıqlı reklam panosu,hereketli reklam panosu,pano reklam,build board,outdoor реклама,реклама на домах,таблички вывески,лайтбокс вывеска,форматы наружной рекламы,рекламное агентство наружка,наружная реклама,наружная реклама лайтбокс,reklama lightbox,billboard kiralamaq,наружная реклама заказать,билборды цена,рекламные щиты цена,led вывеска,вилборд,baku,baki,bakida,region,rayon,rayonda reklam,regionlarda reklam"
+    />
+    <meta name="description" content="Billboard sifarişi, çapı və montajı" />
+    <link rel="shortcut icon" href="{% static 'favicon.png' %}" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="{% static 'use.fontawesome.com/releases/v5.8.2/css/all.css' %}"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link
+      href="{% static 'fonts.googleapis.com/css2f55.css?family=Montserrat:300,400,500,600,700' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'fonts.googleapis.com/css86ec.css?family=Open+Sans:300,400,500,600,700' %}"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-1.8.2.min.js"
+      integrity="sha256-9VTS8JJyxvcUR+v+RTLTsd0ZWbzmafmlzMmeZO9RFyk="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"
+      integrity="sha256-ugED92WALymbx9ylw12aADWaCrsQysE29DyvnAv5i3w="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}" />
+    <script>
+      $(document).ready(function () {
+        $(".filter-btn").on("click", function () {
+          $("#dialog").show();
+        });
+        $(".close-dialog").on("click", function () {
+          $("#dialog").hide();
+        });
+      });
+    </script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+      integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .mfp-close::before {
+        display: none !important;
+      }
+        .pagination li {
+          display: inline-block;
+          padding: 5px;
+        }
+          .btn.btn-secondary{
+                width:30%;
+                font-size: 18px;
+                margin-right: 2px;
+            }
+            .btn-secondary{
+                height:35px;
+            }
+            .tt-col-item{
+                display: flex;
+                justify-content: center;
+            }
+            .tt-product-02{
+                width:260px !important;
+            }
+            .announce-img{
+                height:180px !important;
+            }
+            .btn.btn-secondary{
+             background-color:#aaa7a7 !important;
+            }
+      </style>
+  </head>
+
+  <body id="products">
+
+    {% include 'includes/navbar.html' %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% include 'includes/footer.html' %}
+
+    
+
+    <script
+    data-cfasync="false"
+    src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+  ></script>
+  <script src="list.js"></script>
+
+  
+  <a href="#" id="ttBackToTop" class="tt-back-to-top">BACK TO TOP</a>
+  <script src="{% static 'external/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'external/bootstrap/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'external/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'external/slick/slick.min.js' %}"></script>
+  <script src="{% static 'external/panelmenu/panelmenu.js' %}"></script>
+  <script src="{% static 'external/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'external/isotope/imagesloaded.js' %}"></script>
+  <script src="{% static 'external/sumoselect/jquery.sumoselect.min.js' %}"></script>
+  <script src="{% static 'external/noUiSlider/nouislider.min.js' %}"></script>
+  <script src="{% static 'external/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'external/perfect-scrollbar/perfect-scrollbar.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+  <!-- form validation and sending to mail -->
+  <script src="{% static 'external/form/jquery.form.js' %}"></script>
+  <script src="{% static 'external/form/jquery.validate.min.js' %}"></script>
+  <script src="{% static 'external/form/jquery.form-init.js' %}"></script>
+
+  <script>
+    var options = {
+      valueNames: ["address", "code", "category"],
+      page: 24,
+      pagination: true,
+    };
+
+    var userList = new List("products", options);
+
+    userList.on("updated", function (list) {
+      $("#resultCount").html("Cəmi nəticə: " + list.matchingItems.length);
+    });
+
+    $(".T679").on("click", function () {
+      userList.filter(function (item) {
+        var category = item.values().category;
+        if (category == "T679") {
+          return true;
+        } else {
+          return false;
+        }
+      });
+    });
+
+    $(".T680").on("click", function () {
+      userList.filter(function (item) {
+        var category = item.values().category;
+        if (category == "T680") {
+          return true;
+        } else {
+          return false;
+        }
+      });
+    });
+
+    $(".T681").on("click", function () {
+      userList.filter(function (item) {
+        var category = item.values().category;
+        if (category == "T681") {
+          return true;
+        } else {
+          return false;
+        }
+      });
+    });
+
+    $(".T682").on("click", function () {
+      userList.filter(function (item) {
+        var category = item.values().category;
+        if (category == "T682") {
+          return true;
+        } else {
+          return false;
+        }
+      });
+    });
+
+    $(".T684").on("click", function () {
+      userList.filter(function (item) {
+        var category = item.values().category;
+        if (category == "T684") {
+          return true;
+        } else {
+          return false;
+        }
+      });
+    });
+
+    $(".T722").on("click", function () {
+      userList.filter(function (item) {
+        var category = item.values().category;
+        if (category == "T722") {
+          return true;
+        } else {
+          return false;
+        }
+      });
+    });
+
+    $(".T723").on("click", function () {
+      userList.filter(function (item) {
+        var category = item.values().category;
+        if (category == "T723") {
+          return true;
+        } else {
+          return false;
+        }
+      });
+    });
+
+    $(".T727").on("click", function () {
+      userList.filter(function (item) {
+        var category = item.values().category;
+        if (category == "T727") {
+          return true;
+        } else {
+          return false;
+        }
+      });
+    });
+
+    $(".T726").on("click", function () {
+      userList.filter(function (item) {
+        var category = item.values().category;
+        if (category == "T726") {
+          return true;
+        } else {
+          return false;
+        }
+      });
+    });
+
+    $(".svg-img").on("click", function () {
+      userList.filter();
+    });
+  </script>
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {},
+      Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"),
+        s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = "../embed.tawk.to/56a5f33a8ca615161d9d8dfc/default.js";
+      s1.charset = "UTF-8";
+      s1.setAttribute("crossorigin", "*");
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
+    integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script>
+    $(document).ready(function () {
+      $(".tt-image-box").magnificPopup({
+        delegate: ".image-link",
+        type: "image",
+      });
+    });
+  </script>
+
+  <!--End of Tawk.to Script-->
+  <script>
+     if (JSON.parse(localStorage.getItem('products'))) {
+      products = JSON.parse(localStorage.getItem('products'))
+      document.querySelectorAll('.add_cart').forEach(el => {
+        if (products.includes(parseInt(el.getAttribute('id')))==true) {
+          el.style.color="red"
+        }
+      });
+     }
+  </script>
+
+  <script>
+    document.querySelectorAll('.add_cart').forEach(el => {
+        el.addEventListener('click', (e) => {
+          if (JSON.parse(localStorage.getItem('products'))) {
+            products = JSON.parse(localStorage.getItem('products'))
+            if (products.includes(parseInt(e.target.getAttribute('id')))==false) {
+              products.push(parseInt(e.target.getAttribute('id')))
+              localStorage.setItem('products', JSON.stringify(products))
+            e.target.style.color="red"
+            }
+            else if (products.includes(parseInt(e.target.getAttribute('id')))==true) {
+              const index = products.indexOf(parseInt(e.target.getAttribute('id')));
+                console.log(index);
+                products.splice(index, 1);
+                localStorage.setItem('products', JSON.stringify(products))
+                  e.target.style.color="white"
+            }
+            
+          }
+          else {
+            products = []
+            if (products.includes(parseInt(e.target.getAttribute('id')))==false) {
+            products.push(parseInt(e.target.getAttribute('id')))
+            localStorage.setItem('products', JSON.stringify(products))
+            e.target.style.color="red"
+            }
+          }
+          
+      })
+      })
+  </script>
+</body>
+
+<!-- Mirrored from billboard.az/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Dec 2021 06:27:33 GMT -->
+</html>

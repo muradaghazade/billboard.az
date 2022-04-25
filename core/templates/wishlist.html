@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+  
+  {% block content %}
+    <div id="tt-pageContent" class="pb-4">
+      <div class="row">
+        <h1 class="page_content_title">Seçilmişlər</h1>
+      </div>
+        <div class="row" style="margin-left: 0px;margin-right: 0px;">
+            <div class="col-12 text-center"><span id="resultCount"></span></div>
+            <div class="col-12">
+              <a href="#" class="wishlist_pdf_converter_btn position-absolute">PDF</a>
+                <ul id="tt-product-listing" class="list tt-product-listing row">
+                  
+                  </ul>           
+            </div>
+        </div>
+    </div>
+    {% csrf_token %}
+    <script>
+      const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    </script>
+    
+    <script src="{% static 'js/wishlist.js' %}"></script>
+  {% endblock %}

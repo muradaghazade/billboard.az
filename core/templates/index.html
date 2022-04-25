@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% load static %}
+  
+  {% block content %}
+    <div id="tt-pageContent">
+      <div class="row" style="margin-left: 0px; margin-right: 0px">
+        <div class="col-12 text-center"><span id="resultCount"></span></div>
+        <div class="col-12">
+          <ul id="tt-product-listing" class="list tt-product-listing row">
+            {% for product in products %}
+            <li class="col-6 col-md-4 col-lg-3 tt-col-item">
+              <div class="tt-product-02">
+                <div class="tt-image-box">
+                  <a
+                    class="image-link"
+                    href="{{product.image.url}}"
+                  >
+                    <img
+                      class="announce-img"
+                      src="{{product.image.url}}"
+                      alt=""
+                    />
+                  </a>
+                  <div class="top-left">
+                  </div>
+                  <strong style="position:absolute; bottom:1px; right:10px;color:white;" class="code">Kod: {{product.code}}</strong>
+
+                </div>
+                <div class="tt-wrapper-description">
+                  <div class="tt-row-01">
+                    <div class="tt-box-title">
+                      <h2 class="tt-title address text-left">
+                        {{product.title}}
+                      </h2>
+                      <div class="category" style="display: none">T679</div>
+                      <div
+                        class="row text-left announce_info-row"
+                        style="margin: 0px"
+                      >
+                        <div class="col-xs-6">
+                          <i class="fas fa-sign"></i> {{product.category.title}}<br />
+                          <i class="fas fa-tags"></i> {{product.price}} AZN
+                        </div>
+                        <div class="col-xs-6">
+                          <i class="fas fa-ruler"></i>{{product.size}}sm<br />
+                          <i class="fas fa-print"></i> {{product.support_price}} AZN
+                        </div>
+                      </div>
+                      <div
+                        class="row text-left d-flex justify-content-between mt-2"
+                        style="margin: 5px 0px 0px 0px"
+                      >
+                        <button
+                          id="{{product.id}}"
+                          type="button"
+                          class="btn btn-secondary add_cart"
+                        >
+                        <i class="far fa-heart" id="{{product.id}}"></i>
+                        <!-- <i style="color:#dd3d53;" class="fas fa-heart"></i> -->
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          style="width: 30% !important;"
+                        >
+                          <!-- <i class="fas fa-map-marker-alt"></i> -->
+                          <img style="width:20px;height:20px;" src="{% static 'images/google-maps.png' %}"/>
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          style="width: 30% !important;"
+                          onclick="window.open('https://wa.me/994552132310?text=Kod:%20AB%20010', '_blank')"
+                        >
+                          <!-- <i class="fab fa-whatsapp"></i> -->
+                          <img style="width:20px;height:20px;" src="{% static 'images/whatsapp.png' %}" alt="">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+          <ul class="">
+            <div class="container">
+              <div class="row">
+                  <div class="col-lg-12">
+                      <div class="filter_results_pagination">
+                          <div id="page_stats_0" class="page_stats">
+                              <div class="ps_links">
+                                {% if page_obj.has_previous %}
+                                  <div aria-disabled="true" class="ps_item ps_previous disabled">
+                                          <a class="ps_link ps_next" href="?page={{ page_obj.previous_page_number }}"><span
+                                                  class="ps_item_label">Previous page</span><span class="ps_item_btn"></span></a>
+                                  </div>
+                                {% endif %}
+                                {% if page_obj.has_next %}
+                                  <div class="ps_item">
+                                          <a class="ps_link ps_next" href="?page={{ page_obj.next_page_number }}"><span
+                                                  class="ps_item_label">Next page</span><span class="ps_item_btn"></span></a>
+                                  </div>
+                                {% endif %}
+                              </div>
+                              <div class="ps_pages">
+                                  <div class="ps_pages_indented " style="display:flex;justify-content:center;">
+                                      <div class="left">Page &nbsp; </div>
+                                      <div class="ps_page_number">{{page_obj.number}} &nbsp;</div>
+                                      <div class="left"> of {{page_obj.paginator.num_pages}}</div>
+                                  </div>
+                              </div>
+                              <div class="clear"></div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          </ul>
+         
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+
+    

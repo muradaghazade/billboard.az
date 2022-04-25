@@ -1,0 +1,94 @@
+  {% load static %}
+  <nav class="panel-menu" id="mobile-menu">
+    <ul></ul>
+    <div class="mm-navbtn-names">
+      <div class="mm-closebtn">Close</div>
+      <div class="mm-backbtn">Back</div>
+    </div>
+  </nav>
+  <header id="tt-header" class="tt-header-01">
+    <!-- stuck nav -->
+    <div id="tt-stuck">
+      <div class="container">
+        <div class="tt-stuck-row">
+          <!--logo-->
+          <div class="col-logo">
+            <div class="tt-logo">
+              <a href="{% url 'core:index' %}">
+              <img
+                class="tt-logo-light svg-img"
+                src="{% static 'images/billboard.png' %}"
+                alt=""
+              />
+            </a>
+            <a href="{% url 'core:index' %}">
+              <img
+                class="tt-logo-dark svg-img"
+                src="{% static 'images/billboard.png' %}"
+                alt=""
+              />
+              </a>
+            </div>
+          </div>
+          <!--desctope-menu-->
+          <div class="col-menu col-auto mr-auto">
+            <div class="tt-desctop-menu" id="tt-desctop-menu">
+              <nav>
+                <ul>
+                  {% for category in categories %}
+                  <a href="{% url 'core:index' %}?category={{category.title}}" >
+                  <li><span id="navbutton" class="T679">{{category.title}}</span></li>
+                  </a>
+                  {% endfor %}
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="col-btn-toggle-modal col-auto">
+            <a
+              href="https://api.whatsapp.com/send?phone=994552132310"
+              target="blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-whatsapp"></i> +99455 840 25 00</a
+            >&nbsp&nbsp
+            <a
+              href="cdn-cgi/l/email-protection.html#177e79717857757e7b7b757876657339766d"
+              target="blank"
+              rel="noopener noreferrer"
+            >
+              <i class="far fa-envelope"></i>
+              <span
+                class="__cf_email__"
+                data-cfemail="b1d8dfd7def1d3d8ddddd3ded0c3d59fd0cb"
+                >[email&#160;protected]</span
+              ></a
+            ><br />
+            <div class="d-flex justify-content-between">
+              <form action="{% url 'core:index' %}" class="d-flex justify-content-between">
+              <input
+                name="title"
+                class="search form-control"
+                id="header-input"
+                type="text"
+                placeholder="Axtarış"
+                value="{{request.GET.title}}"
+              />
+              <button class="filter-btn" type="submit">Axtar</button>
+            </form>
+              <a href="wishlist.html"
+                ><button class="wishlist-btn">
+                  <i class="fas fa-heart"></i>
+                  <span class="wishlist_count">10</span>
+                </button></a
+              >
+            </div>
+          </div>
+          <!--btn toggle mobile menu-->
+          <div class="col-menu-toggle col-auto">
+            <a href="#" class="tt-menu-toggle icon-menu"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
