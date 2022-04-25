@@ -58,7 +58,7 @@
                         <i class="far fa-heart" id="{{product.id}}"></i>
                         <!-- <i style="color:#dd3d53;" class="fas fa-heart"></i> -->
                         </button>
-                        <button
+                        <a href="{{product.address}}"><button
                           type="button"
                           class="btn btn-secondary"
                           style="width: 30% !important;"
@@ -66,6 +66,7 @@
                           <!-- <i class="fas fa-map-marker-alt"></i> -->
                           <img style="width:20px;height:20px;" src="{% static 'images/google-maps.png' %}"/>
                         </button>
+                      </a>
                         <button
                           type="button"
                           class="btn btn-secondary"
@@ -105,9 +106,9 @@
                               </div>
                               <div class="ps_pages">
                                   <div class="ps_pages_indented " style="display:flex;justify-content:center;">
-                                      <div class="left">Page &nbsp; </div>
+                                      <div class="left">Səhifə &nbsp; </div>
                                       <div class="ps_page_number">{{page_obj.number}} &nbsp;</div>
-                                      <div class="left"> of {{page_obj.paginator.num_pages}}</div>
+                                      <div class="left"> {{page_obj.paginator.num_pages}}</div>
                                   </div>
                               </div>
                               <div class="clear"></div>

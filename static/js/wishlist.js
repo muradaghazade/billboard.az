@@ -69,6 +69,7 @@ ids = JSON.parse(localStorage.getItem('products'))
                               <i class="far fa-heart" id="${element.id}"></i>
                               <!-- <i style="color:#dd3d53;" class="fas fa-heart"></i> -->
                               </button>
+                              <a href="${element.address}">
                               <button
                                 type="button"
                                 class="btn btn-secondary"
@@ -77,6 +78,7 @@ ids = JSON.parse(localStorage.getItem('products'))
                                 <!-- <i class="fas fa-map-marker-alt"></i> -->
                                 <img style="width:20px;height:20px;" src="/static/images/google-maps.png"/>
                               </button>
+                              </a>
                               <button
                                 type="button"
                                 class="btn btn-secondary"

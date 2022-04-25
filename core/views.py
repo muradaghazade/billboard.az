@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, ListView
-from .models import Category, Product
+from .models import Category, Product, Email, Number
 
 class IndexView(ListView):
     template_name = "index.html"
@@ -12,6 +12,8 @@ class IndexView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['categories'] = Category.objects.order_by("-id")
+        context['email'] = Email.objects.order_by("-id").first()
+        context['number'] = Number.objects.order_by("-id").first()
         return context
 
     def get_queryset(self):
@@ -27,3 +29,9 @@ class IndexView(ListView):
 
 class WishListView(TemplateView):
     template_name = 'wishlist.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['email'] = Email.objects.order_by("-id").first()
+        context['number'] = Number.objects.order_by("-id").first()
+        return context
