@@ -11,7 +11,7 @@ class Product(models.Model):
     price = models.DecimalField('Qiymət',max_digits=6, decimal_places=2)
     support_price = models.DecimalField('Qurlaşdirma Qiyməti',max_digits=6, decimal_places=2)
     image = models.ImageField('Şəkil',upload_to='images/', null=True, blank=True)
-    category = models.ForeignKey('Kateqoriya', on_delete=models.CASCADE, db_index=True, related_name='products', null=True, blank=True)
+    category = models.ForeignKey('Category', on_delete=models.CASCADE, db_index=True, related_name='products', null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
