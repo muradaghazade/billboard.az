@@ -6,6 +6,7 @@ class Product(models.Model):
     code = models.CharField('Kod', max_length=50, blank=True)
     size = models.CharField('Ölcu', max_length=200)
     address = models.CharField('Ünvan', max_length=5000)
+    active = models.BooleanField('Aktiv', default=False)
     retailer = models.CharField('Tədarükcü', max_length=500)
     retail_price = models.DecimalField('Alış Qiyməti',max_digits=6, decimal_places=2)
     price = models.DecimalField('Qiymət',max_digits=6, decimal_places=2)

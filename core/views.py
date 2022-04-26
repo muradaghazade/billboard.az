@@ -7,7 +7,7 @@ class IndexView(ListView):
     model = Product
     context_object_name = "products"
     paginate_by = 16
-    queryset = Product.objects.order_by('-id')
+    queryset = Product.objects.filter(active=True).order_by('-id')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -17,7 +17,7 @@ class IndexView(ListView):
         return context
 
     def get_queryset(self):
-        queryset = Product.objects.order_by("-id")
+        queryset = Product.objects.filter(active=True).order_by('-id')
         category = self.request.GET.get('category')
         title = self.request.GET.get('title')
         if category:

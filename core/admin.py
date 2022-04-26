@@ -1,4 +1,3 @@
-from curses.ascii import EM
 from django.contrib import admin
 from .models import Category, Product, Email, Number
 
@@ -8,7 +7,8 @@ class ProductAdmin(admin.ModelAdmin):
     model = Product
     list_display = ['id','title', 'category', 'code', 'address', 'size', 'retailer', 'retail_price', 'price', 'support_price', 'image',] 
     list_display_links = ('id',)
-    list_editable = ['title', 'category', 'code', 'address', 'size', 'retailer', 'retail_price', 'price', 'support_price', 'image',] 
+    list_editable = ['title', 'category', 'code', 'address', 'size', 'retailer', 'retail_price', 'price', 'support_price', 'image',]
+    search_fields = ('retailer',)
 
 admin.site.register(Product, ProductAdmin)
 
