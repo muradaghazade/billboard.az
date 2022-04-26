@@ -8,7 +8,7 @@ class ProductAdmin(admin.ModelAdmin):
     model = Product
     list_display = ['id','title', 'category', 'code', 'address', 'size', 'retailer', 'retail_price', 'price', 'support_price', 'image',] 
     list_display_links = ('id',)
-    list_editable = ['id','title', 'category', 'code', 'address', 'size', 'retailer', 'retail_price', 'price', 'support_price', 'image',] 
+    list_editable = ['title', 'category', 'code', 'address', 'size', 'retailer', 'retail_price', 'price', 'support_price', 'image',] 
 
 admin.site.register(Product, ProductAdmin)
 
